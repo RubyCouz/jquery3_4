@@ -16,6 +16,7 @@
 </div>
 <div id="rectangle"></div>
 <script>
+var startColor = $('#rectangle').css('background-color');
 //fonction pour changer la taille du rectangle
 $('#size').click(function() {
   rectangle = $('#rectangle').height();
@@ -26,14 +27,13 @@ $('#size').click(function() {
   $('#rectangle').css({'height' : '30px'});
 }
 });
-
 //fonction changement de couleur
 $('#color').click(function() {
   $('#rectangle').css({'background-color' : 'green'});
 });
 // réintialistion de la couleur
 $('#initialColor').click(function() {
-  $('#rectangle').css({'background-color' : 'blue'});
+  $('#rectangle').css({'background-color' : startColor});
 });
 // disparition du rectangle
 $('#disappear').click(function() {
